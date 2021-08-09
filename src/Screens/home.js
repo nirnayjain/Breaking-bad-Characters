@@ -161,7 +161,7 @@ const Home = ({ setId, setAuthor }) => {
 
                                 </>
                                 :
-                                <Typography variant='h5' align='center' style={{ marginTop: 150 }}>No Character Found</Typography>
+                                <Typography variant='h5' align='center' style={{ marginTop: 50 }}>No Character Found</Typography>
                             }
                         </>
 
