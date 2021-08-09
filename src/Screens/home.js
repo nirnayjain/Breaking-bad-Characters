@@ -110,13 +110,20 @@ const Home = ({ setId, setAuthor }) => {
 
                             <Grid item xs={12} md={6} lg={6} sm={12} xl={6} container justify='center' >
                                 <SearchBar
+                                onCancelSearch={()=>setQuery({
+                                            ...query,
+                                            keyword: ""
+                                        })}
                                     placeholder="Search by name..."
-                                    value={query.name}
+                                    value={query.keyword}
                                     onChange={(newValue) => {
                                         setQuery({
                                             ...query,
-                                            keyword: newValue
-                                        })
+                                            keyword: newValue,
+                                            category:""
+                                        });
+                                       setCategory("")
+
                                     }}
                                 />
 
@@ -127,7 +134,7 @@ const Home = ({ setId, setAuthor }) => {
                                     vaiant='outlined'
                                     label="Search by Filter"
                                     value={category}
-                                    onChange={(e) => setCategory(e.target.value)}
+                                    onChange={(e) => {setCategory(e.target.value); setQuery({...query,keyword:""})}}
                                 />
                                 <Button className={classes.filter} color='primary' variant='contained' onClick={applyFilter}>Apply Filter</Button>
                             </Grid>
