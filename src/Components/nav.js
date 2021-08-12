@@ -1,19 +1,13 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import {  useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
     title: {
-        flexGrow: 1,
+        cursor: 'pointer'
 
     },
 }));
@@ -26,7 +20,7 @@ export default function Nav() {
             <AppBar position="static">
                 <Toolbar>
 
-                    <Typography variant="h6" className={classes.title} style={{ cursor: 'pointer' }} onClick={() => history.push('/')}>
+                    <Typography variant="h6" className={classes.title} onClick={() => history.push('/')}>
 
                         Breaking Bad
 
