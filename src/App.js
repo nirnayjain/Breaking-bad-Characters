@@ -8,8 +8,9 @@ const[id,setId]=useState("")
 const[author,setAuthor]=useState("")
  return (
    <>
-    <Nav />
+
      <Router>
+        <Nav />
     <Switch>
       <Route exact path='/' >
         <Home setId={setId} setAuthor={setAuthor}/>

@@ -7,9 +7,12 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     title: {
-        cursor: 'pointer'
-
+        cursor: 'pointer',
+        color: '#fff',
     },
+    link: {
+        textDecoration: "none"
+    }
 }));
 
 export default function Nav() {
@@ -18,7 +21,7 @@ export default function Nav() {
         <div className={classes.root}>
             <AppBar position="sticky">
                 <Toolbar>
-                    <Link to='/'>
+                    <Link to='/' className={classes.link}>
                         <Typography variant="h6" className={classes.title}>
                             Breaking Bad
                         </Typography>
